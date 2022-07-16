@@ -1,0 +1,168 @@
+/* Global css*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Ubuntu:wght@400;500&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 75rem;
+    height: 40rem;
+    background: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    border-radius: 5px;
+}
+
+/* Left */
+.container .left-container {
+    width: 40%;
+    height: 100%;
+    min-width: 40%;
+    min-height: 100%;
+    background: #01d28e;
+    border: none;
+    color: #fff;
+}
+
+.container .left-container .left-title {
+    margin: 2rem 2rem 0rem 2rem;
+    padding: 1.5rem;
+}
+
+.container .left-container .left-title h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.container .left-container .left-title p {
+    font-size: 1.15rem;
+    opacity: .8;
+}
+
+.container .left-container .left-item {
+    margin: 1rem 2rem 0rem 2rem;
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.container .left-container .left-item .left-list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.container .left-container .left-item .left-list i {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+.container .left-container .left-item .left-list .address span {
+    opacity: .8;
+}
+
+/* Right */
+.container .right-container {
+    width: 60%;
+    height: 100%;
+    min-width: 60%;
+    min-height: 100%;
+    background: #fff;
+    border: none;
+}
+
+.container .right-container .right-title {
+    margin: 1.5rem 2rem 0rem 1.5rem;
+    padding: 1.5rem;
+    font-size: 1.75rem;
+}
+
+.container .right-container .form {
+    margin: 0rem 2rem 0rem 2rem;
+}
+
+.container .right-container .form>div {
+    display: flex;
+    width: 100%;
+}
+
+.container .right-container .form>div .form-group .form-control {
+    width: 285px;
+}
+
+.container .right-container .form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.55rem;
+}
+
+.container .right-container .form .form-group label {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.container .right-container .form .form-group .form-control {
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 1.25rem;
+}
+
+.container .right-container .form .form-group .btn {
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #01d28e;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 3px;
+    opacity: .8;
+}
+
+.container .right-container .form .form-group .btn:hover {
+    opacity: 1;
+}
+
+textarea {
+    resize: none
+}
+
+input:focus,
+textarea:focus {
+    border-bottom-color: #01d28e !important;
+
+}
