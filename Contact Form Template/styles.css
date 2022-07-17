@@ -21,6 +21,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5rem 0rem;
 }
 
 a {
@@ -33,7 +34,7 @@ ul {
 
 .container {
     width: 75rem;
-    height: 40rem;
+    height: 45rem;
     background: #fff;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
@@ -165,4 +166,9 @@ input:focus,
 textarea:focus {
     border-bottom-color: #01d28e !important;
 
+}
+
+.error{
+    color: #ff0000;
+    margin-top: 0.5rem;
 }
