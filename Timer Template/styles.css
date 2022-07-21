@@ -19,6 +19,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
+    font-family: 'Poppins', 'Ubuntu', sans-serif;
 }
 
 .timer {
