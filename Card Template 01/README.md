@@ -1,0 +1,1 @@
+![This is an gif](./assets/Card-Template-01-Google-Chrome-2022-07-24-22-37-05.gif)
