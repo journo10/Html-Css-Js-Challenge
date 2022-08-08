@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Ubuntu:wght@400;500&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', 'Ubuntu', sans-serif;
+    background-color: #7f8fa6;
+}
+
+.form {
+    max-width: 20rem;
+    width: 100%;
+    max-height: 3rem;
+    height: 100%;
+    position: relative;
+}
+
+.form .email {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 1rem 1rem;
+    border: 2px solid #fbc531;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: transparent;
+    color: #ffffff;
+}
+
+.form label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 7px;
+    color: #ffffff;
+    transition: all .5s;
+}
+
+.form .email:focus~label {
+    top: -11px;
+    background-color: #7f8fa6;
+}
