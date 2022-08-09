@@ -55,6 +55,7 @@ body {
 }
 
 .form .email:focus~label {
+    /*transform: translateY(-20px) translateX(-3px);*/
     top: -11px;
     background-color: #7f8fa6;
 }
