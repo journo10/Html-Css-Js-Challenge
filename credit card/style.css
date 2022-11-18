@@ -43,7 +43,7 @@ body {
     overflow: hidden;
 }
 
-.container .credit-card {
+.credit-card {
     max-width: 600px;
     max-height: 350px;
     width: 100%;
@@ -69,7 +69,7 @@ body {
     }
 }
 
-.container .credit-card .credit-card-frontend {
+.credit-card-frontend {
     width: 100%;
     height: 100%;
     border: none;
@@ -80,14 +80,14 @@ body {
     padding: 25px;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-title {
+.credit-card-title {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-title span {
+.credit-card-title span {
     font-size: 32px;
     font-family: initial;
     font-style: normal;
@@ -97,19 +97,19 @@ body {
     color: #ffffff;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main {
+.credit-card-main {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin: 10px 0;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-main-images {
+.credit-card-main-images {
     display: flex;
     align-items: center;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-main-images img {
+.credit-card-main-images img {
     max-width: 95px;
     max-height: 95px;
     width: 100%;
@@ -118,7 +118,7 @@ body {
     object-position: center;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-main-images svg {
+.credit-card-main-images svg {
     max-width: 50px;
     max-height: 50px;
     width: 100%;
@@ -129,10 +129,13 @@ body {
     transform: rotate(90deg);
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-number {
+.credit-card-number {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.credit-card-number span {
     font-size: 24px;
     font-family: 'Credit Card';
     line-height: normal;
@@ -141,7 +144,7 @@ body {
     color: #ffffff;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-valid {
+.credit-card-valid {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +152,8 @@ body {
     text-align: center;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-valid p {
+.credit-card-valid-from p,
+.credit-card-valid-end p {
     font-family: initial;
     font-size: 16px;
     line-height: normal;
@@ -158,11 +162,11 @@ body {
     font-weight: 500;
     color: #808080;
     text-transform: uppercase;
-    padding-bottom: 3px;
-    
+    padding-bottom: 4px;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-main .credit-card-valid span {
+.credit-card-valid-from span,
+.credit-card-valid-end span {
     font-family: 'Credit Card';
     font-size: 11px;
     line-height: normal;
@@ -172,13 +176,13 @@ body {
     color: #ffffff;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-footer {
+.credit-card-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-footer p {
+.credit-card-footer p {
     font-size: 21px;
     line-height: normal;
     letter-spacing: 0.1em;
@@ -189,7 +193,7 @@ body {
     font-weight: 500;
 }
 
-.container .credit-card .credit-card-frontend .credit-card-footer img {
+.credit-card-footer img {
     max-width: 110px;
     max-height: 110px;
     width: 100%;
