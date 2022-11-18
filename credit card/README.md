@@ -1,3 +1,3 @@
 ### Gif
 
-![This is an gif](./img/credit-card.gif);
+![This is an gif](./img/credit-card.gif)
