@@ -19,6 +19,7 @@ body {
     max-height: 100%;
 }
 
+/* Navbar start */
 header {
     width: 100%;
     height: 95px;
@@ -26,6 +27,10 @@ header {
     align-items: center;
     justify-content: space-between;
     background: #DDDDDD;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
 }
 
 .navbar {
@@ -45,25 +50,41 @@ header {
 }
 
 .nav-item {
-    font-size: 21px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    position: relative;
+}
+
+.nav-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #ffb716;
+    transition: transform .3s ease-in-out;
+    transform: scaleX(0);
+}
+
+.nav-item:hover::before,
+.nav-item:focus::before {
+    transform: scaleX(1);
 }
 
 .nav-item a {
-    color: #10356d;
-}
-
-.nav-item a:hover {
-    border-bottom: #679def 2px solid;
-    opacity: .7;
-    transition: all .5s ease;
+    font-size: 21px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #151515;
 }
 
 .nav-item a:active {
     color: inherit;
+}
+
+.nav-item a.active {
+    color: #ffb716;
 }
 
 .search {
@@ -80,7 +101,7 @@ header {
     font-weight: 500;
     padding: 15px;
     background-color: #ffffff;
-    border: 1px solid #10356d;
+    border: 1px solid #ffb716;
     border-radius: 21px;
     transition: all .5s ease;
 }
@@ -119,19 +140,41 @@ header {
     border: none;
     outline: none;
     text-transform: capitalize;
-    background: #ffd43b;
-    color: #10356d;
+    background: #ffb716;
+    color: #ffffff;
     font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
 }
 
-.navbar .auth .btn:hover {
-    background: #679def;
+.navbar .auth .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #10356d;
+    z-index: -9;
+    transition: transform .3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.navbar .auth .btn:hover,
+.navbar .auth .btn:focus {
     color: #ffffff;
-    cursor: pointer;
-    transition: all .5s ease;
+}
+
+.navbar .auth .btn:hover::before,
+.navbar .auth .btn:focus::before {
+    transform: scaleX(1);
 }
 
 .hamburger {
@@ -145,7 +188,125 @@ header {
     font-size: 24px;
     cursor: pointer;
 }
+/* Navbar end */
 
+/* Main 1 start */
+#main {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    background-image: url("./img/pexels-main.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    display: flex;
+    position: relative;
+}
+
+#main::before {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(128, 128, 128, 0.5);
+}
+
+.m-container {
+    width: 475px;
+    height: 325px;
+    margin: auto;
+    overflow: hidden;
+    border: 4px solid #ffb716;
+    border-bottom-left-radius: 52px;
+    border-top-right-radius: 52px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    animation: mainContainerAnimation 1s alternate infinite;
+}
+
+@keyframes mainContainerAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(25px);
+    }
+}
+
+.m-container-front {
+    padding: 13px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 21px;
+    align-items: center;
+}
+
+.m-container-front h1 {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    line-height: normal;
+    color: #10356d;
+}
+
+.m-container-body h2 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #151515;
+    padding-bottom: 7px;
+}
+
+.m-container-body h2 span {
+    color: #10356d;
+}
+
+.m-container-body p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: normal;
+    color: #10356d;
+}
+
+.m-container-front button {
+    margin-top: 52px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: normal;
+    line-height: normal;
+    text-transform: capitalize;
+    color: #10356d;
+    border-radius: 4px;
+}
+
+.m-container-front button:hover {
+    background: #10356d;
+    color: #ffb716;
+    transition: all .3s ease-in;
+    border: #ffb716 1px solid;
+    cursor: pointer;
+}
+/* Main 1 end */
+
+/* Main 2 start */
 main {
     width: 100%;
     height: auto;
@@ -161,6 +322,7 @@ main #h1 {
     line-height: normal;
     font-style: normal;
     letter-spacing: normal;
+    text-transform: capitalize;
 }
 
 main .container {
@@ -175,8 +337,6 @@ main .container {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 16px;
-
 }
 
 .main-left .main-left-img {
@@ -250,7 +410,7 @@ main .container {
 .main-right {
     width: 40%;
     height: auto;
-    padding: 8px 16px;
+    padding: 0px 16px;
 }
 
 .main-right h2 {
@@ -259,7 +419,7 @@ main .container {
     line-height: normal;
     font-style: normal;
     letter-spacing: normal;
-    padding-bottom: 5px;
+    padding-bottom: 8px;
 }
 
 .main-right-container {
@@ -268,7 +428,6 @@ main .container {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    padding: 10px;
 }
 
 .main-right-card {
@@ -279,12 +438,23 @@ main .container {
     overflow: hidden;
 }
 
-.main-right-card img {
-    width: 150px;
+.main-right-card .main-right-card-img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.main-right-card .main-right-card-img img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
     cursor: pointer;
+    transition: all .5s;
+}
+
+.main-right-card .main-right-card-img img:hover {
+    transform: scale(1.25);
 }
 
 .main-right-comment {
@@ -310,7 +480,9 @@ main .container {
     color: #808080;
     padding-bottom: 32px;
 }
+/* Main 2 end */
 
+/* Card start */
 section {
     width: 100%;
     height: 500px;
@@ -339,7 +511,6 @@ section .container {
 
 .card:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    cursor: pointer;
     transition: all .5s ease;
 }
 
@@ -395,20 +566,42 @@ section .container {
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.1em;
-    background: #10356d;
-    padding: 7px 14px;
+    background: #ffb716;
+    padding: 10px 14px;
     color: #ffffff;
     border-radius: 7px;
     text-transform: capitalize;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
 }
 
-.card-front .card-comment button:hover {
-    cursor: pointer;
-    background: #ffffff;
-    color: #10356d;
-    border: #10356d 1px solid;
-    transition: all .5s;
+.card-front .card-comment button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #10356d;
+    z-index: -9;
+    transition: transform .3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
 }
+
+.card-front .card-comment button:hover,
+.card-front .card-comment button:focus {
+    color: #ffffff;
+}
+
+.card-front .card-comment button:hover::before,
+.card-front .card-comment button:focus::before {
+    transform: scaleX(1);
+}
+/* Card end */
 
 /* Responsive */
 @media screen and (max-width:992px) {
@@ -443,7 +636,7 @@ section .container {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        position: relative;
+        position: fixed;
         padding-right: 18px;
     }
 
