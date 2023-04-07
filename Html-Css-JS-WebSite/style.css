@@ -27,7 +27,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #DDDDDD;
+    background: #151515;
     position: fixed;
     top: 0;
     left: 0;
@@ -77,7 +77,7 @@ header {
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: #151515;
+    color: #ffffff;
 }
 
 .nav-item a:active {
@@ -101,7 +101,7 @@ header {
     font-size: 16px;
     font-weight: 500;
     padding: 15px;
-    background-color: #ffffff;
+    background: #ffffff;
     border: 1px solid #ffb716;
     border-radius: 21px;
     transition: all .5s ease;
@@ -188,6 +188,7 @@ header {
     outline: none;
     font-size: 24px;
     cursor: pointer;
+    color: #ffffff;
 }
 
 /* Navbar end */
